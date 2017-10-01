@@ -294,8 +294,14 @@ module.exports = {
 function custom() {
   const config = module.exports;
 
+  // use updated react-hot-loader
+  config.entry.splice(1, 0, require.resolve('react-hot-loader/patch'));
+
   // import pseudo-absolute paths relative to src
   config.resolve.alias['@src'] = paths.appSrc;
+
+  const jsRule = config.module.rules[1].oneOf[1];
+  jsRule.options.plugins = ['transform-decorators-legacy'];
 
   // append sass-loader which is css compattible
   const cssRule = config.module.rules[1].oneOf[2];

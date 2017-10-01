@@ -4,6 +4,8 @@ Customized create-react-app scripts which adds
 
 * SASS support (.scss)
 * `@src` alias for pseudo-absolute imports
+* react-hot-loader
+* decorators
 
 To use
 
