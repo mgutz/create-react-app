@@ -1,5 +1,5 @@
 {
-  "name": "@mgutz/react-scripts",
+  "name": "mgutz-react-scripts",
   "version": "1.0.14",
   "description": "Configuration and scripts for Create React App.",
   "repository": "facebookincubator/create-react-app",
