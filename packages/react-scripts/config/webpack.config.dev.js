@@ -287,3 +287,22 @@ module.exports = {
     hints: false,
   },
 };
+
+////////////////////////////////////////////////////////////////////////////////
+// our custom config
+
+function custom() {
+  const config = module.exports;
+
+  // import pseudo-absolute paths relative to src
+  config.resolve.alias['@src'] = paths.appSrc;
+
+  // append sass-loader which is css compattible
+  const cssRule = config.module.rules[1].oneOf[2];
+  cssRule.test = /\.s?css$/;
+  cssRule.use.push({
+    loader: require.resolve('sass-loader'),
+  });
+}
+
+custom();
