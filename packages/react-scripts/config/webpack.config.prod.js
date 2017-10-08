@@ -367,7 +367,7 @@ function custom() {
   const config = module.exports;
 
   // import pseudo-absolute paths relative to src
-  config.resolve.alias['@src'] = paths.appSrc;
+  config.resolve.alias['#'] = paths.appSrc;
 
   config.module.rules[1].oneOf[2] = {
     test: /\.s?css$/,

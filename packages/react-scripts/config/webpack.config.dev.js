@@ -298,7 +298,7 @@ function custom() {
   config.entry.splice(1, 0, require.resolve('react-hot-loader/patch'));
 
   // import pseudo-absolute paths relative to src
-  config.resolve.alias['@src'] = paths.appSrc;
+  config.resolve.alias['#'] = paths.appSrc;
 
   const jsRule = config.module.rules[1].oneOf[1];
   jsRule.options.plugins = ['transform-decorators-legacy'];
