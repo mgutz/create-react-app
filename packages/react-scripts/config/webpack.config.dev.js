@@ -305,7 +305,7 @@ function custom() {
 
   // append sass-loader which is css compattible
   const cssRule = config.module.rules[1].oneOf[2];
-  cssRule.test = /\.s?css$/;
+  cssRule.test = /\.(sass|scss|css)$/;
   cssRule.use.push({
     loader: require.resolve('sass-loader'),
   });

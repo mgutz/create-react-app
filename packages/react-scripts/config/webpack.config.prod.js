@@ -197,7 +197,12 @@ module.exports = {
             loader: ExtractTextPlugin.extract(
               Object.assign(
                 {
-                  fallback: require.resolve('style-loader'),
+                  fallback: {
+                    loader: require.resolve('style-loader'),
+                    options: {
+                      hmr: false,
+                    },
+                  },
                   use: [
                     {
                       loader: require.resolve('css-loader'),
@@ -370,7 +375,7 @@ function custom() {
   config.resolve.alias['#'] = paths.appSrc;
 
   config.module.rules[1].oneOf[2] = {
-    test: /\.s?css$/,
+    test: /\.(sass|scss|css)$/,
     loader: ExtractTextPlugin.extract(
       Object.assign(
         {
