@@ -9,7 +9,7 @@ Customized create-react-app scripts which adds
 
 To use
 
-    create-react-app --scripts-version mgutz-react-scripts my-app
+    create-react-app --scripts-version mgutz-react-scripts@next my-app
 
 
 _These features required changes to CRA's webpack configs necessitating a fork._
